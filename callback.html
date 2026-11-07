@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connecting TikTok | Kol Yom Maaloma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section class="card en">
+    <h2>Finishing TikTok login…</h2>
+    <p>You are being returned to the Kol Yom Maaloma Publisher on your computer.</p>
+    <p class="muted">If nothing happens, make sure the publisher is running, then <a id="go" href="#">click here</a>.</p>
+  </section>
+</main>
+<script>
+  // Hand the OAuth result to the local publisher console; nothing is stored on this site.
+  var target = "http://localhost:8765/callback" + location.search;
+  document.getElementById("go").href = target;
+  if (location.search) location.replace(target);
+</script>
+</body>
+</html>
